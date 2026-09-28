@@ -1,0 +1,50 @@
+{
+  "name": "yhwh",
+  "version": "1.0.0",
+  "description": "Prints one random verse from the book of Psalms and \"God bless you!\" in 36 languages. Zero dependencies.",
+  "keywords": [
+    "bible",
+    "psalms",
+    "verse",
+    "blessing",
+    "i18n",
+    "christian",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "Diego da Fonseca",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegofonseca/yhwh.git"
+  },
+  "homepage": "https://github.com/diegofonseca/yhwh#readme",
+  "bugs": {
+    "url": "https://github.com/diegofonseca/yhwh/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "bin": {
+    "yhwh": "bin/yhwh.js"
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node --test",
+    "update-fallback": "node scripts/update-fallback.js",
+    "prepublishOnly": "npm test"
+  }
+}
